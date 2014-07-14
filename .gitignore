@@ -6,3 +6,7 @@ MANIFEST
 *.egg*
 distribute-*
 .DS_Store
+.idea
+*.log
+dev.db
+test_project/test_project/local_settings.py
