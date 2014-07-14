@@ -4,7 +4,14 @@ from django.contrib.admin.views.decorators import staff_member_required
 import vobject
 from vobject.vcard import *
 from django.shortcuts import render_to_response
-import StringIO
+
+try:
+    from io import StringIO
+except ImportError:
+    # Python 2
+    import StringIO
+
+
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 

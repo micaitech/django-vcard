@@ -1009,7 +1009,7 @@ class Url(models.Model):
     A Url associted with a contact.
     """
     contact = models.ForeignKey(Contact)
-    data = models.URLField(verify_exists=False)
+    data = models.URLField()
 
     class Meta:
         verbose_name = _("url")

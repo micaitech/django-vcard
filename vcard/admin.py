@@ -1,10 +1,10 @@
+from django.conf.urls import patterns
 from vcard.models import *
 from django.contrib import admin
 from django.http import HttpResponseRedirect, HttpResponse
-from vcard.admin_views import *
+from vcard.admin_views import vcf_file_view
 import vcard
 from django.shortcuts import render_to_response
-from django.conf.urls.defaults import *
 from django.utils.translation import ugettext as _
 
 """
@@ -154,9 +154,9 @@ class ContactAdmin(admin.ModelAdmin):
                 newContactList.append(c)
 
         except Exception as e:
-            print type(e)
-            print e.args
-            print e
+            print(type(e))
+            print(e.args)
+            print(e)
 
             for i in newContactList :
                 i.delete()
